@@ -1,5 +1,5 @@
 /* =========================================
-   БАЗОВІ НАЛАШТУВАННЯ ТА ЗМІННІ
+   BASE SETTINGS AND VARIABLES
 ========================================= */
 :root {
     --primary-color: #2563eb;
@@ -21,11 +21,11 @@ body {
     color: var(--text-main);
     background-color: var(--bg-white);
     line-height: 1.6;
-    padding-top: 70px; /* Відступ для фіксованого хедера */
+    padding-top: 70px; /* Offset for fixed header */
 }
 
 /* =========================================
-   КНОПКИ ТА ЕЛЕМЕНТИ (UI)
+   BUTTONS AND UI ELEMENTS
 ========================================= */
 .btn {
     padding: 10px 20px;
@@ -53,7 +53,7 @@ body {
 }
 
 /* =========================================
-   ХЕДЕР ТА НАВІГАЦІЯ
+   HEADER AND NAVIGATION
 ========================================= */
 .header {
     position: fixed;
@@ -88,11 +88,11 @@ body {
     text-decoration: none;
     color: var(--text-main);
     font-weight: 500;
-    display: none; /* Ховаємо лінки на мобільному (залишаємо тільки кнопку) */
+    display: none; /* Hide links on mobile (leave only button) */
 }
 
 /* =========================================
-   СЕКЦІЇ
+   SECTIONS
 ========================================= */
 section {
     padding: 60px 20px;
@@ -104,7 +104,7 @@ h2 {
     font-size: 2rem;
 }
 
-/* ГОЛОВНИЙ ЕКРАН (Hero) */
+/* HERO SECTION */
 .hero {
     background-color: var(--bg-light);
     text-align: center;
@@ -122,10 +122,10 @@ h2 {
     margin-bottom: 30px;
 }
 
-/* ТАБИ (Можливості) */
+/* TABS (Features) */
 .tabs-header {
     display: flex;
-    flex-direction: column; /* На мобільному кнопки табів йдуть колонкою */
+    flex-direction: column; /* On mobile the tab buttons stack vertically */
     gap: 10px;
     margin-bottom: 30px;
 }
@@ -161,7 +161,7 @@ h2 {
     margin-bottom: 10px;
 }
 
-/* АКОРДЕОН (FAQ) */
+/* ACCORDION (FAQ) */
 .accordion {
     max-width: 800px;
     margin: 0 auto;
@@ -187,7 +187,7 @@ h2 {
     display: none;
 }
 
-/* ФУТЕР */
+/* FOOTER */
 .footer {
     text-align: center;
     padding: 20px;
@@ -242,11 +242,11 @@ h2 {
 }
 
 /* =========================================
-   АДАПТИВНІСТЬ (Від планшета і вище)
+   RESPONSIVE STYLES (Tablet and up)
 ========================================= */
 @media (min-width: 768px) {
     .main-nav a {
-        display: block; /* Показуємо лінки в хедері */
+        display: block; /* Show links in the header */
     }
     
     .hero h1 {
@@ -260,7 +260,7 @@ h2 {
     }
     
     .tabs-header {
-        flex-direction: row; /* На ПК кнопки табів йдуть в один ряд */
+        flex-direction: row; /* On desktop the tab buttons are arranged in a row */
         justify-content: center;
     }
     
