@@ -21,4 +21,17 @@ $(document).ready(function () {
         $(this).fadeOut(300);
     }
   })
+
+  $(".tab-content.active").show();
+
+  $(".tab-btn").click(function(){
+    $(".tab-btn").removeClass("active");
+    $(this).addClass("active");
+
+    let idOfTab = $(this).data("tab");
+
+    $(".tab-content").hide();
+
+    $("#" + idOfTab).fadeIn(300);
+  })
 });
