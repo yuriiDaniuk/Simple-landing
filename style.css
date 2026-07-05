@@ -1,0 +1,270 @@
+/* =========================================
+   БАЗОВІ НАЛАШТУВАННЯ ТА ЗМІННІ
+========================================= */
+:root {
+    --primary-color: #2563eb;
+    --hover-color: #1d4ed8;
+    --text-main: #1f2937;
+    --text-muted: #6b7280;
+    --bg-light: #f3f4f6;
+    --bg-white: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    color: var(--text-main);
+    background-color: var(--bg-white);
+    line-height: 1.6;
+    padding-top: 70px; /* Відступ для фіксованого хедера */
+}
+
+/* =========================================
+   КНОПКИ ТА ЕЛЕМЕНТИ (UI)
+========================================= */
+.btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background 0.3s ease;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: var(--bg-white);
+}
+
+.btn-primary:hover {
+    background-color: var(--hover-color);
+}
+
+.btn-large {
+    background-color: var(--primary-color);
+    color: var(--bg-white);
+    padding: 15px 30px;
+    font-size: 1.1rem;
+}
+
+/* =========================================
+   ХЕДЕР ТА НАВІГАЦІЯ
+========================================= */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--bg-white);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    z-index: 100;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.logo span {
+    color: var(--primary-color);
+}
+
+.main-nav {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.main-nav a {
+    text-decoration: none;
+    color: var(--text-main);
+    font-weight: 500;
+    display: none; /* Ховаємо лінки на мобільному (залишаємо тільки кнопку) */
+}
+
+/* =========================================
+   СЕКЦІЇ
+========================================= */
+section {
+    padding: 60px 20px;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2rem;
+}
+
+/* ГОЛОВНИЙ ЕКРАН (Hero) */
+.hero {
+    background-color: var(--bg-light);
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.hero h1 {
+    font-size: 2.2rem;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    color: var(--text-muted);
+    margin-bottom: 30px;
+}
+
+/* ТАБИ (Можливості) */
+.tabs-header {
+    display: flex;
+    flex-direction: column; /* На мобільному кнопки табів йдуть колонкою */
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.tab-btn {
+    padding: 12px;
+    background: var(--bg-light);
+    border: 1px solid #e5e7eb;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.tab-btn.active {
+    background: var(--primary-color);
+    color: var(--bg-white);
+    border-color: var(--primary-color);
+}
+
+.tabs-body {
+    background: var(--bg-white);
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content h3 {
+    margin-bottom: 10px;
+}
+
+/* АКОРДЕОН (FAQ) */
+.accordion {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.accordion-item {
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    overflow: hidden;
+}
+
+.accordion-header {
+    padding: 15px 20px;
+    background: var(--bg-white);
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.accordion-body {
+    padding: 0 20px 15px 20px;
+    color: var(--text-muted);
+    display: none;
+}
+
+/* ФУТЕР */
+.footer {
+    text-align: center;
+    padding: 20px;
+    background: var(--text-main);
+    color: var(--bg-white);
+}
+
+/* =========================================
+   МОДАЛЬНЕ ВІКНО
+========================================= */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: none;
+    z-index: 999;
+}
+
+.modal-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: var(--bg-white);
+    padding: 30px;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+}
+
+.modal-input {
+    width: 100%;
+    padding: 12px;
+    margin: 15px 0;
+    border: 1px solid #e5e7eb;
+    border-radius: 6px;
+}
+
+.btn-close-modal {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: var(--text-muted);
+}
+
+/* =========================================
+   АДАПТИВНІСТЬ (Від планшета і вище)
+========================================= */
+@media (min-width: 768px) {
+    .main-nav a {
+        display: block; /* Показуємо лінки в хедері */
+    }
+    
+    .hero h1 {
+        font-size: 3.5rem;
+    }
+    
+    .hero p {
+        font-size: 1.2rem;
+        max-width: 600px;
+        margin: 0 auto 30px auto;
+    }
+    
+    .tabs-header {
+        flex-direction: row; /* На ПК кнопки табів йдуть в один ряд */
+        justify-content: center;
+    }
+    
+    .tab-btn {
+        width: 200px;
+    }
+}
