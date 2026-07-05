@@ -33,7 +33,7 @@ The project does not require complex environment setup or build tools.
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yuriiDaniuk/Simple-landing.git (https://github.com/yuriiDaniuk/Simple-landing.git)
+   git clone https://github.com/yuriiDaniuk/Simple-landing.git
 
 2. Open the project folder.
 
