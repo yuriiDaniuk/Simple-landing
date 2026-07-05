@@ -34,4 +34,18 @@ $(document).ready(function () {
 
     $("#" + idOfTab).fadeIn(300);
   })
+
+  $(".accordion-header").click(function(){
+    let bodyOfThis = $(this).next(".accordion-body");
+
+    if(bodyOfThis.is(":visible")){
+        bodyOfThis.slideUp(300);
+    }
+    else{
+        $(".accordion-body").slideUp(300);
+
+        bodyOfThis.slideDown(300);
+    }
+
+  })
 });
